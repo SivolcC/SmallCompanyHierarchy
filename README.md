@@ -11,13 +11,17 @@
 The guide below is for Unix based systems. Few steps may differ for Windows based systems.
 
 After cloning the repository, set up the isolated python environment:
+
 `$> virtualenv -p <your/path/to/python3/binary> env`
+
 `$> source env/bin/activate`
 
 Install the required python packages listed in requirements.txt with pip:
+
 `$> pip install -r requirements.txt`
 
 Execute the python file with the interpreter:
+
 `$> python small_company.py`
 
 ## Details
