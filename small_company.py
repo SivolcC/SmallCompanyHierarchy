@@ -21,14 +21,11 @@ def build_tree(p_num, p_node, data, nodes):
 
             
 def find_root(data):
-    try:
-        roots = list(filter(lambda item: not item['manager_id'], data)) # get list of objects with no parent id
-        if len(roots) < 1:
-            raise Exception('Error in data: No root found.')
-        elif len(roots) > 1:
-            raise Exception('Error in data : One or more object is missing a parent.')
-    except:
-        raise
+    roots = list(filter(lambda item: not item['manager_id'], data)) # get list of objects with no parent id
+    if len(roots) < 1:
+        raise Exception('Error in data: No root found.')
+    elif len(roots) > 1:
+        raise Exception('Error in data : One or more object is missing a parent.')
     return roots[0]['id'], roots[0]['name']
 
 
